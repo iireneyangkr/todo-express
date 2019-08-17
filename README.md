@@ -5,7 +5,7 @@ npm install
 ```
 
 ```sql
-CREATE DATABASE tasks (
+CREATE TABLE tasks (
     id SERIAL PRIMARY KEY,
     title VARCHAR NOT NULL,
     is_done BOOLEAN DEFAULT FALSE,
