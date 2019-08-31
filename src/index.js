@@ -22,6 +22,13 @@ app.get('/tasks', async (req, res) => {
   res.render('index', { rows, error } )
 })
 
+app.post('tasks/done', (req, res) => {
+  function myFunction() {
+    const isdone = document.getElementById("isdone");
+    isdone.checked = true;
+  }
+})
+
 app.post('/tasks/add', (req, res) => {
   const task = req.body.task
   if (task === "") {

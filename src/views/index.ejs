@@ -29,6 +29,11 @@
             </tr>
             <% rows.forEach((tasks) => { %>
                 <tr>
+                    <td>
+                        <form action="/tasks/done" method="POST">
+                        <input type="checkbox" id="isdone" value="false" onclick="myFunction()" />
+                        </form>
+                    </td>
                     <td><%= tasks.title %></td>
                     <td>
                         <form action="/tasks/delete" method="POST">
