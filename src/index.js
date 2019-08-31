@@ -31,7 +31,7 @@ app.post('tasks/done', (req, res) => {
 
 app.post('/tasks/add', (req, res) => {
   const task = req.body.task
-  if (task === "") {
+  if (task.trim() === "") {
     res.redirect('/tasks?error=Please+type+your+value')
   } else {
     query(`INSERT INTO tasks (title) VALUES ('${task}')`)
