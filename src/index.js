@@ -26,6 +26,7 @@ app.post('tasks/done', (req, res) => {
   function myFunction() {
     const isdone = document.getElementById("isdone");
     isdone.checked = true;
+    console.log(isdone)
   }
 })
 
